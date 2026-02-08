@@ -18,5 +18,7 @@ public class Teacher {
         return this.subject;
     }
 
-    
+	public String toString() {
+		return this.name + " (" + this.subject + ")";
+	}
 }

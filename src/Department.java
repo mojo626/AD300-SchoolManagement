@@ -10,8 +10,8 @@ public class Department {
 
     public Department(String name) {
         this.name = name;
-	this.teachers = new ArrayList<>();
-	this.students = new ArrayList<>();
+		this.teachers = new ArrayList<>();
+		this.students = new ArrayList<>();
     }
 
     public void addTeacher(Teacher teacher) {
@@ -33,4 +33,16 @@ public class Department {
     public String getName() {
         return this.name;
     }
+
+	public String toString() {
+		String result = this.name + "\n- Teachers: ";
+		
+		for (Teacher teacher : teachers) {
+			result += teacher + ", ";
+		}
+
+		result = result.substring(0, result.length() - 2);
+
+		return result;
+	}
 }
