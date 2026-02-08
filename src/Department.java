@@ -2,8 +2,6 @@ package src;
 
 import java.util.ArrayList;
 
-import src.Student;
-
 public class Department {
 
     private String name;
