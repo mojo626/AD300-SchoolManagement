@@ -2,6 +2,8 @@ package src;
 
 import java.util.ArrayList;
 
+import src.Student;
+
 public class Department {
 
     private String name;
@@ -35,13 +37,21 @@ public class Department {
     }
 
 	public String toString() {
-		String result = this.name + "\n- Teachers: ";
+		String result = this.name + " Department\n- Teachers: ";
 		
 		for (Teacher teacher : teachers) {
 			result += teacher + ", ";
 		}
 
 		result = result.substring(0, result.length() - 2);
+		result += "\n- Students: ";
+
+		for (Student student : students) {
+			result += student + ", ";
+		}
+
+		result = result.substring(0, result.length() - 2);
+		result += "\n";
 
 		return result;
 	}

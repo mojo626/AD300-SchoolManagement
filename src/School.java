@@ -2,6 +2,8 @@ package src;
 
 import java.util.ArrayList;
 
+import src.Department;
+
 public class School {
 
     private String name;
@@ -23,5 +25,23 @@ public class School {
     public String getName() {
         return this.name;
     }
+
+	public String toString() {
+		String result = "School: " + this.name + "\nDepartments: ";
+
+		for (Department department : departments) {
+			result += department.getName() + ", ";
+		}
+
+		result = result.substring(0, result.length() - 2);
+		result += "\n";
+
+
+		for (Department department : departments) {
+			result += department;
+		}
+
+		return result;
+	}
     
 }
